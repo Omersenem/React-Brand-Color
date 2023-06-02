@@ -10,17 +10,14 @@ function Content(){
     })
    const [brands, setBrands] =useState(brandsArray)
     return(
-        <main className="content">
+        <main className="content bg-[#f8f8f8]">
 
          <header className="header">
              <Search/>
          </header>
-            <section className="brands">
+            <section className="brands mt-3">
                 {
-                    brands.map(brand => (
-
-                        <Brand brand={brand.title}/>
-                    ))
+                        <Brand brand={brands}/>
                 }
 
             </section>

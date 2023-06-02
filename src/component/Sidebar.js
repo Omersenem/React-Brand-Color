@@ -13,9 +13,10 @@ function Sidebar() {
     return (
         <>
             <aside className="sidebar w-80 min-w-80 border-r-[1px] border-solid border-[#ccc] p-6">
-                <div className="logo mb-6">
+                <div className="logo mb-6 flex">
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href="#" className="text-3xl	">Brand<b>Colors</b></a>
+                    <a href="#"><img className="w-10 h-10 mr-5" src="https://brandcolors.net/assets/img/logo.png" alt=""/></a>
+                    <a href="#" className="text-3xl	my-auto">Brand<b>Colors</b></a>
                 </div>
                 <div className="description text-lg	leading-7	text-[#999] mb-6   ">The biggest collection of
                     official brand color codes around. Curated by @brandcolors and friends.
