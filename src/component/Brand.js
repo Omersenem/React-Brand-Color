@@ -1,3 +1,5 @@
+import {getContrastYIQ} from "../helpers";
+
 function Brand ({brand}){
     return(
         <>
@@ -9,8 +11,8 @@ function Brand ({brand}){
                    <div className="flex">
                        {
                            brand.colors.map(color =>(
-                               <div style={{backgroundColor: `#${color}`}}  className="w-[70px] h-[40px] flex items-center justify-center">
-                                   <h5 className="hidden">{color}</h5>
+                               <div style={{'--bgColor': `#${color}`, '--textColor':`${getContrastYIQ(color)}` }}  className="brand ">
+                                   <h5 className="">{color}</h5>
                                </div>
                            ))
                        }

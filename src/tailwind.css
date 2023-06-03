@@ -62,3 +62,9 @@ html,body{
     @apply
     w-full h-full text-base
 }
+.brand{
+    background: var(--bgColor);
+    color: var(--textColor);
+    @apply
+    w-[70px] h-[40px] flex items-center justify-center flex-1
+}
