@@ -4,4 +4,4 @@
 Demo
 Nasıl olduğunu merak ediyorsanız demoyu kontrol edebilirsiniz.
 
-react-brand-color-phi.vercel.app
+https://react-brand-color-phi.vercel.app/
