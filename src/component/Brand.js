@@ -1,17 +1,24 @@
 import {getContrastYIQ} from "../helpers";
+import MainContext from "../MainContext";
+import {useContext} from "react";
 
 function Brand ({brand}){
+    const {setSelectedBrands,selectedBrands} = useContext(MainContext)
+    const toogleSelected = () =>{
+        if(selectedBrands.includes(brand.slug)){
+            setSelectedBrands(selectedBrands.filter(slug => slug !== brand.slug))
+        }else{
+            setSelectedBrands([...selectedBrands, brand.slug])
+        }
+    }
     return(
-        <>
-            {brand.map(brand => (
+                <div  className={`brands ${selectedBrands.includes(brand.slug) ? 'select' : ''}`}>
 
-                <div className=" w-full mx-4 mb-2 bg-white border-[1px] border-solid border-[#ddd] p-4 ">
-
-                    <h5 className="mb-2 text-lg font-bold cursor-pointer">{brand.title}</h5>
+                    <h5 onClick={toogleSelected} className="mb-2 text-lg font-bold cursor-pointer ">{brand.title}</h5>
                    <div className="flex">
                        {
-                           brand.colors.map(color =>(
-                               <div style={{'--bgColor': `#${color}`, '--textColor':`${getContrastYIQ(color)}` }}  className="brand ">
+                           brand.colors.map((color,index) =>(
+                               <div key={index} style={{'--bgColor': `#${color}`, '--textColor':`${getContrastYIQ(color)}` }}  className="brand">
                                    <h5 className="">{color}</h5>
                                </div>
                            ))
@@ -19,9 +26,6 @@ function Brand ({brand}){
                    </div>
 
                 </div>
-
-            ))}
-        </>
 
     )
 }
