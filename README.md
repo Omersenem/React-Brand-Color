@@ -4,4 +4,4 @@
 Demo
 Nasıl olduğunu merak ediyorsanız demoyu kontrol edebilirsiniz.
 
-https://react-brand-color.netlify.app/
+react-brand-color-phi.vercel.app
