@@ -1,0 +1,141 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+}
+#root{
+  height: 100%;
+  display: flex;
+}
+.about-modal{
+  box-shadow: 0 0 15px 0  rgba(0,0,0, .1);
+  @apply
+  max-w-[720px] bg-white p-12
+}
+.modal-aciklama{
+  @apply
+  text-lg mb-5 leading-7
+}
+.modal-close-btn{
+  @apply
+  flex w-full justify-end
+}
+.content{
+  @apply
+  flex-1
+  overflow-auto
+}
+.header{
+  @apply
+  h-[60px] border-b-[1px] border-solid border-[#ccc] flex sticky top-0
+}
+.search{
+  @apply
+  relative
+  flex
+  flex-1
+}
+.search-input{
+  padding: 0 20px 0 60px;
+  @apply
+  w-full h-full text-base
+}
+
+.copied {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 4px;
+  font-size: 16px;
+  z-index: 10;
+}
+.svg-copy{
+  position: relative;
+  vertical-align: top;
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  visibility: hidden;
+}
+.svg-copy:hover{
+  opacity: 1;
+  visibility: visible;
+
+
+}
+.brands {
+  height: calc(100% - 60px);
+  width: 100%;
+  .brand {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 15px;
+    margin: 10px 15px;
+
+    h5 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    &-colors {
+      display: flex;
+
+      span {
+        cursor: pointer;
+        background: var(--bgColor);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--textColor);
+        text-indent: -9999px;
+        width: 70px;
+      }
+    }
+
+    &.selected {
+      border-color: red;
+      .brand-colors {
+        span {
+          flex: 1;
+          text-indent: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

@@ -11,7 +11,7 @@ function Content(){
          <header className="header">
              <Search/>
          </header>
-            <section className=" mt-3">
+            <section className=" mt-3 brands">
                 {
                        brands.map(brand => (
                            <Brand brand={brand}/>
